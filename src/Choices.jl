@@ -60,7 +60,7 @@ function Base.show(io::IO, x::Choice)
     print(io, " and call ",
           (occursin(r"^\w+$", string(nameof(x.receive))) ?
 	    x.receive : "a nontrivial function"))
-  isnothing(x.back) || print(io, " or go back to ", x.back)
+  nothing === x.back || print(io, " or go back to ", x.back)
   print(io, ")")
 end
 
@@ -172,9 +172,9 @@ function Base.iterate(x::Choice, state::IterationState)
   currentChoice = state.currentChoice
   optionsState = state.optionsState
   iterateResult =
-    (isnothing(optionsState) ? iterate(currentChoice.options) :
+    (nothing === optionsState ? iterate(currentChoice.options) :
 	iterate(currentChoice.options, optionsState))
-  while (!isnothing(iterateResult))
+  while (nothing !== iterateResult)
     opt, optionsState = iterateResult
     @debug "considering option" opt
     try
@@ -198,12 +198,12 @@ function Base.iterate(x::Choice, state::IterationState)
     end
     @debug "iterating to next option"
     iterateResult =
-      (isnothing(optionsState) ? iterate(currentChoice.options) :
+      (nothing === optionsState ? iterate(currentChoice.options) :
 	  iterate(currentChoice.options, optionsState))
   end
   # if we get here, we have exhausted the options for this Choice
   @debug "exhausted options" currentChoice.options
-  if (isnothing(state.back)) # we can't backtrack anymore
+  if (nothing === state.back) # we can't backtrack anymore
     @debug "exhausted all options!"
     return nothing
   else # backtrack
