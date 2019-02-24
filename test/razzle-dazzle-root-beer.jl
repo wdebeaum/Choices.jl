@@ -12,4 +12,5 @@ get_both_parts() =
   get_second_part() |> second_part ->
   check_pair(first_part, second_part)
 @test [get_both_parts()...] == [("razzle", "dazzle"), ("root", "beer")]
+cut()
 
