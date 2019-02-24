@@ -27,8 +27,9 @@ function amb_test()
   end
   comp = (comp |> (words -> join(words, " ")))
   # get all the possible answers
-  return [comp...]
+  answers = [comp...]
+  cut()
+  return answers
 end
 # test that we got the right answer only
 @test amb_test() == ["that thing grows slowly"]
-cut()

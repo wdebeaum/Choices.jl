@@ -11,6 +11,8 @@ get_both_parts() =
   get_first_part() |> first_part ->
   get_second_part() |> second_part ->
   check_pair(first_part, second_part)
-@test [get_both_parts()...] == [("razzle", "dazzle"), ("root", "beer")]
+actual = [get_both_parts()...]
 cut()
+expected = [("razzle", "dazzle"), ("root", "beer")]
+@test actual == expected
 
