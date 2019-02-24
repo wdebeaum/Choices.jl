@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/wdebeaum/Choices.jl.png)](https://travis-ci.org/wdebeaum/Choices.jl)
 [![codecov.io](http://codecov.io/github/wdebeaum/Choices.jl/coverage.svg?branch=master)](http://codecov.io/github/wdebeaum/Choices.jl?branch=master)
 
+# Choices
+
 Support for nondeterministic programming in Julia, using iterable, backtracking
 Choices and a special method of the |> operator for combining them with
 (anonymous) functions (which stand in for continuations). This is as close as
