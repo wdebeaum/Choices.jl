@@ -3,5 +3,8 @@ uuid = "ff107042-37a5-11e9-3c66-410664686671"
 authors = ["William de Beaumont <wdebeaum@gmail.com>"]
 version = "0.1.0"
 
+[compat]
+julia = "0.7, 1"
+
 [deps]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

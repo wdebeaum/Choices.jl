@@ -14,7 +14,7 @@ export choose, fail, cut
 
 Represents a call to choose() whose options (of type T) we have not yet fully
 explored, as well as the overall nondeterministic computation that this choice
-is at the end of, and the collection of its remaining successful results.
+is at the end of, and the collection of its successful results.
 
 # Example
 ```jldoctest
