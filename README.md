@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/wdebeaum/Choices.jl.png)](https://travis-ci.org/wdebeaum/Choices.jl)
-[![codecov.io](http://codecov.io/github/wdebeaum/Choices.jl/coverage.svg?branch=master)](http://codecov.io/github/wdebeaum/Choices.jl?branch=master)
+<!-- [![codecov.io](http://codecov.io/github/wdebeaum/Choices.jl/coverage.svg?branch=master)](http://codecov.io/github/wdebeaum/Choices.jl?branch=master) -->
 
 # Choices
 
